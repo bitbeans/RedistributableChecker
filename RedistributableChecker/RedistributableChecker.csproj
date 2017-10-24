@@ -7,7 +7,9 @@
     <Copyright>Copyright (c) 2017 Christian Hermann &amp; Contributors</Copyright>
     <PackageLicenseUrl>https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bitbeans/RedistributableChecker</PackageProjectUrl>
-    <Description>Check if Visual C++ Redistributable Packages for Visual Studio is installed.</Description>
+    <Description>Check if Visual C++ Redistributable Packages for Visual Studio are installed.</Description>
+    <PackageReleaseNotes>- Check for Visual C++ Redistributable Package 2017 (x86)
+- Check for Visual C++ Redistributable Package 2017 (x64)</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
