@@ -4,6 +4,10 @@
     <TargetFramework>netstandard1.6</TargetFramework>
     <Version>0.1.0</Version>
     <Authors>bitbeans</Authors>
+    <Copyright>Copyright (c) 2017 Christian Hermann &amp; Contributors</Copyright>
+    <PackageLicenseUrl>https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/bitbeans/RedistributableChecker</PackageProjectUrl>
+    <Description>Check if Visual C++ Redistributable Packages for Visual Studio is installed.</Description>
   </PropertyGroup>
 
   <ItemGroup>
