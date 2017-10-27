@@ -2,14 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>bitbeans</Authors>
     <Copyright>Copyright (c) 2017 Christian Hermann &amp; Contributors</Copyright>
     <PackageLicenseUrl>https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bitbeans/RedistributableChecker</PackageProjectUrl>
-    <Description>Check if Visual C++ Redistributable Packages for Visual Studio are installed.</Description>
-    <PackageReleaseNotes>- Check for Visual C++ Redistributable Package 2017 (x86)
-- Check for Visual C++ Redistributable Package 2017 (x64)</PackageReleaseNotes>
+    <Description>Check if Microsoft Visual C++ Redistributable Packages are installed.</Description>
+    <PackageReleaseNotes>Check for:
+- Visual C++ Redistributable Package 2017 (x86)
+- Visual C++ Redistributable Package 2017 (x64)
+- Visual C++ Redistributable Package 2015 (x86)
+- Visual C++ Redistributable Package 2015 (x64)
+- Visual C++ Redistributable Package 2013 (x86)
+- Visual C++ Redistributable Package 2013 (x64)
+- Visual C++ Redistributable Package 2012 (x86)
+- Visual C++ Redistributable Package 2012 (x64)
+- Visual C++ Redistributable Package 2010 (x86)
+- Visual C++ Redistributable Package 2010 (x64)
+- Visual C++ Redistributable Package 2008 (x86)
+- Visual C++ Redistributable Package 2008 (x64)
+- Visual C++ Redistributable Package 2005 (x86)
+- Visual C++ Redistributable Package 2005(x64)</PackageReleaseNotes>
+    <PackageTags>Visual C++ Redistributable Package</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
