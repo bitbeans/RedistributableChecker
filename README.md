@@ -2,7 +2,7 @@
 
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md) [![NuGet Version](https://img.shields.io/nuget/v/RedistributableChecker.svg?style=flat-square)](https://www.nuget.org/packages/RedistributableChecker/)
 
-### Can checks for the following packages ###
+### Can check for the following packages ###
 - Microsoft Visual C++ Redistributable Package 2017 (x86) :heavy_check_mark:
 - Microsoft Visual C++ Redistributable Package 2017 (x64) :heavy_check_mark:
 - Microsoft Visual C++ Redistributable Package 2015 (x86) :heavy_check_mark:
