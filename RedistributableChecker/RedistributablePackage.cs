@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 
 namespace RedistributableChecker
 {
@@ -42,23 +43,39 @@ namespace RedistributableChecker
 				switch (redistributableVersion)
 				{
 					case RedistributablePackageVersion.VC2017x86:
-						var parametersVc2017x86 = Registry.ClassesRoot.OpenSubKey(@"Installer\Dependencies\,,x86,14.0,bundle", false);
-						if (parametersVc2017x86 == null) return false;
-						var vc2017x86Version = parametersVc2017x86.GetValue("Version");
-						if (vc2017x86Version == null) return false;
-						if (((string)vc2017x86Version).StartsWith("14"))
+						var paths2017x86 = new List<string>
 						{
-							return true;
+							@"Installer\Dependencies\,,x86,14.0,bundle",
+							@"Installer\Dependencies\VC,redist.x86,x86,14.16,bundle" //changed in 14.16.x
+						};
+						foreach (var path in paths2017x86)
+						{
+							var parametersVc2017x86 = Registry.ClassesRoot.OpenSubKey(path, false);
+							if (parametersVc2017x86 == null) continue;
+							var vc2017x86Version = parametersVc2017x86.GetValue("Version");
+							if (vc2017x86Version == null) return false;
+							if (((string)vc2017x86Version).StartsWith("14"))
+							{
+								return true;
+							}
 						}
 						break;
 					case RedistributablePackageVersion.VC2017x64:
-						var parametersVc2017x64 = Registry.ClassesRoot.OpenSubKey(@"Installer\Dependencies\,,amd64,14.0,bundle", false);
-						if (parametersVc2017x64 == null) return false;
-						var vc2017x64Version = parametersVc2017x64.GetValue("Version");
-						if (vc2017x64Version == null) return false;
-						if (((string)vc2017x64Version).StartsWith("14"))
+						var paths2017x64 = new List<string>
 						{
-							return true;
+							@"Installer\Dependencies\,,amd64,14.0,bundle",
+							@"Installer\Dependencies\VC,redist.x64,amd64,14.16,bundle" //changed in 14.16.x
+						};
+						foreach (var path in paths2017x64)
+						{
+							var parametersVc2017x64 = Registry.ClassesRoot.OpenSubKey(path, false);
+							if (parametersVc2017x64 == null) continue;
+							var vc2017x64Version = parametersVc2017x64.GetValue("Version");
+							if (vc2017x64Version == null) return false;
+							if (((string)vc2017x64Version).StartsWith("14"))
+							{
+								return true;
+							}
 						}
 						break;
 					case RedistributablePackageVersion.VC2015x86:

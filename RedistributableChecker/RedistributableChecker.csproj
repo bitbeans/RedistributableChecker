@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.2.0</Version>
+    <Version>0.2.2</Version>
     <Authors>bitbeans</Authors>
-    <Copyright>Copyright (c) 2017 Christian Hermann &amp; Contributors</Copyright>
+    <Copyright>Copyright (c) 2017 - 2018 Christian Hermann &amp; Contributors</Copyright>
     <PackageLicenseUrl>https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bitbeans/RedistributableChecker</PackageProjectUrl>
     <Description>Check if Microsoft Visual C++ Redistributable Packages are installed.</Description>
