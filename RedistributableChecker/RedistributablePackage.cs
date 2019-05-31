@@ -23,7 +23,9 @@ namespace RedistributableChecker
 		VC2015x64,
 		VC2017x86,
         VC2017x64,
-    };
+		VC2015to2019x86,
+		VC2015to2019x64,
+	};
 
 	/// <summary>
 	///	Class to detect installed Microsoft Redistributable Packages.
@@ -42,6 +44,24 @@ namespace RedistributableChecker
             {
 				switch (redistributableVersion)
 				{
+					case RedistributablePackageVersion.VC2015to2019x86:
+						var parametersVc2015to2019x86 = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum", false);
+						if (parametersVc2015to2019x86 == null) return false;
+						var vc2015to2019x86Version = parametersVc2015to2019x86.GetValue("Version");
+						if (((string)vc2015to2019x86Version).StartsWith("14"))
+						{
+							return true;
+						}
+						break;
+					case RedistributablePackageVersion.VC2015to2019x64:
+						var parametersVc2015to2019x64 = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum", false);
+						if (parametersVc2015to2019x64 == null) return false;
+						var vc2015to2019x64Version = parametersVc2015to2019x64.GetValue("Version");
+						if (((string)vc2015to2019x64Version).StartsWith("14"))
+						{
+							return true;
+						}
+						break;
 					case RedistributablePackageVersion.VC2017x86:
 						var paths2017x86 = new List<string>
 						{

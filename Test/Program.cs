@@ -21,7 +21,8 @@ namespace Test
 			Console.WriteLine("VC2015x86 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2015x86));
 			Console.WriteLine("VC2017x64 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2017x64));
             Console.WriteLine("VC2017x86 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2017x86));
-            Console.ReadLine();
+			Console.WriteLine("VC2015-2019x64 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2015to2019x64));
+			Console.WriteLine("VC2015-2019x86 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2015to2019x86));
         }
     }
 }
