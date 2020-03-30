@@ -4,8 +4,8 @@
     <TargetFramework>netstandard1.6</TargetFramework>
     <Version>0.2.3</Version>
     <Authors>bitbeans</Authors>
-    <Copyright>Copyright (c) 2017 - 2019 Christian Hermann &amp; Contributors</Copyright>
-    <PackageLicenseUrl>https://github.com/bitbeans/RedistributableChecker/blob/master/LICENSE.md</PackageLicenseUrl>
+    <Copyright>Copyright (c) 2017 - 2020 Christian Hermann &amp; Contributors</Copyright>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bitbeans/RedistributableChecker</PackageProjectUrl>
     <Description>Check if Microsoft Visual C++ Redistributable Packages are installed.</Description>
     <PackageReleaseNotes>
@@ -28,6 +28,7 @@
       - Visual C++ Redistributable Package 2005(x64)</PackageReleaseNotes>
     <PackageTags>Visual C++ Redistributable Package</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

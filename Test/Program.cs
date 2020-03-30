@@ -5,7 +5,7 @@ namespace Test
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 			Console.WriteLine("VC2005x64 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2005x64));
 			Console.WriteLine("VC2005x86 installed {0}", RedistributablePackage.IsInstalled(RedistributablePackageVersion.VC2005x86));
