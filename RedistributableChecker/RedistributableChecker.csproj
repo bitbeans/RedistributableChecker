@@ -29,6 +29,7 @@
     <PackageTags>Visual C++ Redistributable Package</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/bitbeans/RedistributableChecker</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
