@@ -45,21 +45,23 @@ namespace RedistributableChecker
 				switch (redistributableVersion)
 				{
 					case RedistributablePackageVersion.VC2015to2019x86:
-						var parametersVc2015to2019x86 = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum", false);
-						if (parametersVc2015to2019x86 == null) return false;
-						var vc2015to2019x86Version = parametersVc2015to2019x86.GetValue("Version");
-						if (((string)vc2015to2019x86Version).StartsWith("14"))
+						String keyNameStart = "VC,redist.x86,x86";
+						RegistryKey dependencies = Registry.ClassesRoot.OpenSubKey(@"Installer\Dependencies", false);
+						if (dependencies == null) return false;
+						foreach (String subKeyName in dependencies.GetSubKeyNames())
 						{
-							return true;
+							if (subKeyName.StartsWith(keyNameStart))
+								return true;
 						}
 						break;
 					case RedistributablePackageVersion.VC2015to2019x64:
-						var parametersVc2015to2019x64 = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum", false);
-						if (parametersVc2015to2019x64 == null) return false;
-						var vc2015to2019x64Version = parametersVc2015to2019x64.GetValue("Version");
-						if (((string)vc2015to2019x64Version).StartsWith("14"))
+						keyNameStart = "VC,redist.x64,amd64";
+						dependencies = Registry.ClassesRoot.OpenSubKey(@"Installer\Dependencies", false);
+						if (dependencies == null) return false;
+						foreach (String subKeyName in dependencies.GetSubKeyNames())
 						{
-							return true;
+							if (subKeyName.StartsWith(keyNameStart))
+								return true;
 						}
 						break;
 					case RedistributablePackageVersion.VC2017x86:
